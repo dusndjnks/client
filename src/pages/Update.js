@@ -1,8 +1,15 @@
 import React from 'react'
+import Layout from '../components/Layout'
 
 const Update = () => {
   return (
-    <div>Update</div>
+   <Layout>
+     <div className='h-screen w-screen flex justify-center items-center'>
+          <div>
+              Update
+          </div>
+        </div>
+   </Layout>
   )
 }
 

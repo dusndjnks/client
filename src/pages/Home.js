@@ -4,7 +4,11 @@ import Layout from '../components/Layout'
 const Home = () => {
   return (
     <Layout>
-        <h1>ksjbjkb</h1>
+        <div className='h-screen w-screen flex justify-center items-center'>
+          <div>
+              
+          </div>
+        </div>
     </Layout>
   )
 }
