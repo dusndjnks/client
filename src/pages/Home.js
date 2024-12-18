@@ -1,11 +1,30 @@
 import React from 'react'
 import Layout from '../components/Layout'
+import axios from 'axios'
+import { useState , useEffect } from 'react' 
+
+
 
 const Home = () => {
+
+  const [tasks,setTasks] = useState([])
+
+	const getAllTasks = async () => {
+		try{
+			const {data} = await axios.get("/api/v1/tasks/get-tasks")
+			setTasks(data.tasks)
+		}catch(error){
+			console.log("Error in Getting All Products");
+		}
+	}
+
+	useEffect(() => {
+		getAllTasks()
+	},[])
+
   return (
     <Layout>
-          <div>
-          <div class="pt-40 flex flex-col items-center justify-center">
+          <div class="flex flex-col items-center bg-gray-300  min-h-[90vh] justify-center">
 
           <div className='flex flex-col text-center mb-8'>
             <h1 class="text-4xl font-bold text-gray-800">To-Do List</h1>
@@ -17,7 +36,6 @@ const Home = () => {
                 <div class="flex items-center">
                   <input 
                     type="text" 
-                    
                     id="new-task" 
                     placeholder="Add a new task" 
                     class="flex-1 border border-gray-300 rounded-l-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
@@ -39,7 +57,6 @@ const Home = () => {
               </ul>
             </main>
           </div>
-        </div>
     </Layout>
   )
 }
