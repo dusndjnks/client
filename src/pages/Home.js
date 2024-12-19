@@ -20,10 +20,20 @@ const Home = () => {
 		getAllTasks()
 	},[])
 
+  const deleteTask = async (id) => {
+    try {
+      await axios.delete("/api/v1/tasks/delete-task/${id}");
+      // const delete = await axios.delete()
+      setTasks((prevTasks) => prevTasks.filter((task) => task.id !== id));
+    } catch (error) {
+      console.log("Error in Deleting Task:");
+    }
+  };
+
   return (
     <Layout >
-          <div className='h-screen w-screen py-20 bg-gray-300'>
-          <div class="flex flex-col items-center bg-gray-300 h-screen w-screen justify-center  ">
+          <div className='pt-20 w-screen pt-20 bg-gray-300 '>
+          <div class="flex flex-col items-center bg-gray-300 h-screen w-screen justify-center pt-40 ">
           <div className='flex flex-col text-center mb-8 '>
             <h1 class="text-4xl font-bold text-gray-800">To-Do List</h1>
             <p class="text-gray-600 mt-2">Stay organized and productive</p>
@@ -40,7 +50,7 @@ const Home = () => {
                           <span className='text-xl uppercase text-gray-800' >{item.title}</span>
                           <span className='text-sm text-gray-800'>{item.description}</span>
                             </div>                          
-                          <button className='text-red-500'>Delete</button>
+                          <button onClick={() => deleteTask(task.id)} className='text-red-500'>Delete</button>
                         </div>
                     </div>
                   </div>
