@@ -32,8 +32,8 @@ const Home = () => {
 
   return (
     <Layout >
-          <div className='pt-20 w-screen pt-20 bg-gray-300 '>
-          <div class="flex flex-col items-center bg-gray-300 h-screen w-screen justify-center pt-40 ">
+          <div className='bg-gray-300 w-screen'>
+          <div class="flex flex-col items-center  justify-center w-screen py-20">
           <div className='flex flex-col text-center mb-8 '>
             <h1 class="text-4xl font-bold text-gray-800">To-Do List</h1>
             <p class="text-gray-600 mt-2">Stay organized and productive</p>
