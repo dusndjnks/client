@@ -16,7 +16,7 @@ const TaskForm = () => {
     try {
       const { data } = await axios.post("/api/v1/tasks/create-tasks", {
         title,
-        description,
+        description
       });
       setFeedback("Task added successfully!");
       setTitle("");
@@ -28,8 +28,8 @@ const TaskForm = () => {
 
   return (
    <Layout>
-  <div className="bg-gray-300">
-  <div className="flex h-screen w-screen justify-center items-center">
+  <div className="bg-gray-300 ">
+  <div className="fle min-h-screen w-screen justify-center items-center">
   <form onSubmit={addTask} className="bg-white p-6 rounded shadow-lg w-full max-w-md">
     <h2 className="text-2xl font-semibold mb-4">Add a Task</h2>
     <div className="mb-4">
