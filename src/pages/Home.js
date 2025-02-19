@@ -35,7 +35,7 @@ const Home = () => {
 
   return (
     <Layout >
-          <div className='bg-gray-300 w-screen'>
+          <div className='bg-gray-300 w-screen min-h-screen'>
           <div className="flex flex-col items-center  justify-center w-screen py-20">
           <div className='flex flex-col text-center mb-8 '>
             <h1 className="text-4xl font-bold text-gray-800">To-Do List</h1>
