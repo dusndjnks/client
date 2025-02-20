@@ -97,10 +97,17 @@ const Update = () => {
               <div key={item._id} className="bg-white shadow-md px-4 py-2 rounded-md my-4">
                 <div className="flex justify-between items-center w-[400px] rounded-lg px-6 py-2 bg-gray-100">
                   <div className="flex flex-col">
+<<<<<<< HEAD
                     <span className="text-xl uppercase text-gray-800 font-semibold">{item.title}</span>
                     <span className="text-sm text-gray-800">{item.description}</span>
                   </div>
                   <button onClick={() => getSingleTasks(item._id)} className="text-red-600">
+=======
+                    <span className="text-xl uppercase text-gray-800">{item.title}</span>
+                    <span className="text-sm text-gray-800">{item.description}</span>
+                  </div>
+                  <button onClick={() => getSingleTasks(item._id)} className="text-gray-900">
+>>>>>>> 5afb1addb0d852a695f47590d9f1ebb8eb15f93e
                     Edit
                   </button>
                 </div>
