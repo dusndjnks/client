@@ -13,10 +13,7 @@ const TaskForm = () => {
       
     }
     try {
-      const { data } = await axios.post("/api/v1/tasks/create-tasks", {
-        title,
-        description,
-      });
+      const { data } = await axios.post("/api/v1/tasks/create-tasks", {title,description});
       console.log("Task added successfully");            
       setTitle("");
       setDescription("");
