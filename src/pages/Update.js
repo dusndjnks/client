@@ -59,12 +59,12 @@ const Update = () => {
     <Layout>
        <div className="bg-gray-300 flex flex-col items-center pt-10 w-screen min-h-screen">
         <h1 className="text-4xl font-bold text-gray-800 pb-8">Edit the Task</h1>
-        <form onSubmit={updateTasks} className="space-x-5 m-3 flex rounded-lg">
-          <div className="flex flex-col rounded px-14 py-2 outline-none border-none gap-2 bg-white">
+        <form onSubmit={updateTasks} className="space-x-5 m-3 flex items-center rounded-lg bg-white pl-16 text-black pr-8 py-2">
+          <div className="flex flex-col rounded    py-2 outline-none border-none gap-">
             <input className="outline-none border-none font-semibold tracking-wide text-lg" type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Title" />
             <input className="outline-none border-none font-semibold tracking-wide text-lg" type="text" value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Description" required/>
           </div>
-          <button type="submit" className="bg-black text-white px-3 py-1 rounded-lg w-28">Submit</button>
+          <button type="submit" className="bg-black text-white rounded-lg h-14 w-28">Submit</button>
         </form>
         <div>
           {tasks &&
