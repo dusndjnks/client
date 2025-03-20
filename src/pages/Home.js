@@ -19,6 +19,7 @@ const Home = () => {
 	useEffect(() => {
 		getAllTasks()
 	},[])
+  
 
   const deleteTask = async (id) => {
     try{
